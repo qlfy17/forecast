@@ -1,0 +1,25 @@
+[package]
+name = "forecast"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+axum = "0.7.9"
+axum-macros = "0.4.2"
+base64 = "0.22.1"
+dotenvy = "0.15.7"
+reqwest = { version = "0.12.9", features = ["json"] }
+serde = "1.0.215"
+sqlx = { version = "0.8.2", features = [
+    "macros",
+    "any",
+    "postgres",
+    "runtime-tokio-rustls",
+] }
+tokio = { version = "1.41.1", features = ["full"] }
+
+[dev-dependencies]
+axum-macros = "0.4.2"
